@@ -54,7 +54,7 @@
       services.gpg-agent.enable = true;
 
       home.shellAliases = {
-        rebuild = "sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --flake .#frame1 --impure";
+        rebuild = "sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --flake github:deephack1982/nixos-config#frame1 --impure";
       };
 
       home.sessionVariables = {

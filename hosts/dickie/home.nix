@@ -22,7 +22,6 @@
       pkgs.asciinema
       pkgs.asciinema-agg
       pkgs.websocat
-      #pkgs.slack
       pkgs.pgcli
       pkgs.refine
       pkgs.bruno
@@ -46,7 +45,6 @@
       pkgs.superfile
       pkgs.taskwarrior3
       pkgs.taskwarrior-tui
-      #timr-tui.packages.aarch64-linux.default
     ];
 
     programs.bash.enable = true;
@@ -54,7 +52,7 @@
     services.gpg-agent.enable = true;
 
     home.shellAliases = {
-      rebuild = "sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --flake .#dickie --impure";
+      rebuild = "sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --flake github:deephack1982/nixos-config#dickie --impure";
     };
 
     home.sessionVariables = {
