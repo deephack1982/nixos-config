@@ -22,7 +22,7 @@
       pkgs.asciinema
       pkgs.asciinema-agg
       pkgs.websocat
-      pkgs.slack
+      #pkgs.slack
       pkgs.pgcli
       pkgs.refine
       pkgs.bruno
