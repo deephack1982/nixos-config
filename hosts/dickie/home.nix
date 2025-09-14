@@ -46,7 +46,7 @@
       pkgs.superfile
       pkgs.taskwarrior3
       pkgs.taskwarrior-tui
-      timr-tui.packages.x86_64-linux.default
+      timr-tui.packages.aarch64-linux.default
     ];
 
     programs.bash.enable = true;
