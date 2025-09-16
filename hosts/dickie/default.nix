@@ -32,6 +32,7 @@
   };
  console = {
       keyMap = "sv-latin1";
+      font = "${pkgs.powerline-fonts}/share/consolefonts/ter-powerline/v20n.psf.gz";
  };
 
   services.xserver = {
