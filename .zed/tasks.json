@@ -1,0 +1,6 @@
+[
+  {
+    "label": "check",
+    "command": "nix flake check --impure"
+  }
+]
