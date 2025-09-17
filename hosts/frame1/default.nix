@@ -29,6 +29,15 @@
   };
   hardware.enableRedistributableFirmware = true;
 
+  programs.regreet = {
+    enable = true;
+    settings = {
+      GTK = {
+        application_prefer_dark_theme = true;
+      };
+    };
+  };
+
   services.fwupd = {
     enable = true;
     extraRemotes = [ "lvfs-testing" ];
