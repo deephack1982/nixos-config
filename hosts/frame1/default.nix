@@ -68,5 +68,7 @@
    console.keyMap = "uk";
    console.font = "Lat2-Terminus16";
 
+   programs.gnupg.agent.enable = true;
+
    system.stateVersion = "25.05";
 }

@@ -47,6 +47,7 @@
         pkgs.taskwarrior3
         pkgs.taskwarrior-tui
         timr-tui.packages.x86_64-linux.default
+        pkgs.slides
       ];
 
       programs.bash.enable = true;
