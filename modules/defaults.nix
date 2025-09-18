@@ -35,5 +35,7 @@
 
   security.polkit.enable = true;
 
+  services.power-profiles-daemon.enable = true;
+
   programs.mtr.enable = true;
 }
