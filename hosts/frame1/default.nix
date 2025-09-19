@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [
@@ -30,10 +30,10 @@
   hardware.enableRedistributableFirmware = true;
 
   programs.regreet = {
-    enable = true;
+    enable = lib.mkForce true;
     settings = {
       GTK = {
-        application_prefer_dark_theme = true;
+        application_prefer_dark_theme = lib.mkForce true;
       };
     };
   };
