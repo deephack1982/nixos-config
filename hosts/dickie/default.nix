@@ -35,6 +35,11 @@
       font = "${pkgs.powerline-fonts}/share/consolefonts/ter-powerline/v20n.psf.gz";
  };
 
+ services.greetd = {
+   enable = true;
+   settings.default_session.command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland"
+ }
+
   services.xserver = {
     enable = true;
   };

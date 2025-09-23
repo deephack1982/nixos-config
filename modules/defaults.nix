@@ -37,5 +37,32 @@
 
   services.power-profiles-daemon.enable = true;
 
-  programs.mtr.enable = true;
+  programs = {
+    mtr.enable = true;
+    direnv.enable = true;
+    wshowkeys.enable = true;
+  };
+
+  services.pulseaudio.enable = false;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
+
+  # Networking
+  services.resolved.enable = true;
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+  networking = {
+    networkmanager.enable = true;
+  };
+
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-emoji
+    nerd-fonts.caskaydia-mono
+  ];
+
 }
