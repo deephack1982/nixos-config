@@ -75,5 +75,19 @@
 
    programs.gnupg.agent.enable = true;
 
+   # Sudoers config
+   security.sudo = {
+     enable = true;
+     extraRules = [{
+      commands = [
+        {
+          command = "${pkgs.podman}/bin/podman'";
+          options = [ "NOPASSWD" ];
+        }
+      ];
+      groups = [ "wheel" ];
+     }];
+   };
+
    system.stateVersion = "25.05";
 }
