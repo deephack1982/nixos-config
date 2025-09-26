@@ -58,6 +58,17 @@
         rebuild = "sudo nixos-rebuild switch --flake github:deephack1982/nixos-config#frame1 --impure";
       };
 
+      xdg.desktopEntries  = {
+        slack = {
+          name="Slack";
+          comment="Slack Desktop";
+          genericName="Slack Client for Linux";
+          exec="slack -s --enable-features=UseOzonePlatform --ozone-platform=wayland %U";
+          categories= [ "GNOME" "GTK" "Network" "InstantMessaging" ];
+          mimeType=[ "x-scheme-handler/slack" ];
+        };
+      };
+
       home.sessionVariables = {
         GOOGLE_APPLICATION_CREDENTIALS = "/home/markd/Documents/Safe/google.json";
       };

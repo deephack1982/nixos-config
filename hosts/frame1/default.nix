@@ -78,6 +78,7 @@
    # Sudoers config
    security.sudo = {
      enable = true;
+     wheelNeedsPassword = false;
      extraRules = [{
       commands = [
         {
