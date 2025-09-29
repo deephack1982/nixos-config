@@ -49,6 +49,7 @@
         timr-tui.packages.x86_64-linux.default
         pkgs.slides
         pkgs.teams-for-linux
+        pkgs.satty
       ];
 
       programs.bash.enable = true;
