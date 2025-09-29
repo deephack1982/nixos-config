@@ -48,7 +48,7 @@
         pkgs.taskwarrior-tui
         timr-tui.packages.x86_64-linux.default
         pkgs.slides
-        pkgs.teams
+        pkgs.teams-for-linux
       ];
 
       programs.bash.enable = true;
