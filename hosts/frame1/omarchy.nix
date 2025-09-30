@@ -3,7 +3,7 @@
     full_name = "Mark Dickie";
     email_address = "mark.dickie@gmail.com";
     theme = "tokyo-night";
-    monitors = [ ",preferred,auto,1" ];
+    monitors = [ "eDP-1,preferred,auto,1" ",preferred,auto,1,mirror,eDP-1" ];
     terminal = "ghostty";
   };
 }
