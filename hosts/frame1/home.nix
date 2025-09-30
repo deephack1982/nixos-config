@@ -50,6 +50,7 @@
         pkgs.slides
         pkgs.teams-for-linux
         pkgs.satty
+        pkgs.intune-portal
       ];
 
       programs.bash.enable = true;
