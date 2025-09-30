@@ -119,6 +119,9 @@
           "nix" = {
             "language_servers" = [ "nil" "!nixd" ];
             "binary".path_lookup = true;
+            "flake" = {
+              autoArchive = true;
+            };
           };
           "languages"."Ruby"."language_servers" = [ "ruby-lsp" "!solargraph" "..." ];
           "load_direnv" = "shell_hook";
