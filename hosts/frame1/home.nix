@@ -76,6 +76,10 @@
         GOOGLE_APPLICATION_CREDENTIALS = "/home/markd/Documents/Safe/google.json";
       };
 
+      programs.distrobox = {
+        enable = true;
+      }
+
       programs.firefox = {
         enable = true;
         languagePacks = [ "en-GB" ];
