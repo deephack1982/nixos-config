@@ -78,7 +78,7 @@
 
       programs.distrobox = {
         enable = true;
-      }
+      };
 
       programs.firefox = {
         enable = true;
