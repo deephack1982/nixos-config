@@ -52,7 +52,7 @@
         pkgs.satty
         master-pkgs.intune-portal
         pkgs.nemu
-        pkgs.virt-virt-viewer
+        pkgs.virt-viewer
       ];
 
       programs.bash.enable = true;
