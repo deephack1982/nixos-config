@@ -51,6 +51,8 @@
         pkgs.teams-for-linux
         pkgs.satty
         master-pkgs.intune-portal
+        pkgs.nemu
+        pkgs.virt-virt-viewer
       ];
 
       programs.bash.enable = true;
