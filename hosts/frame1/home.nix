@@ -59,6 +59,12 @@
       programs.gpg.enable = true;
       services.gpg-agent.enable = true;
 
+      programs.oh-my-posh = {
+        enable = true;
+        enableBashIntegration = true;
+        useTheme = "gruvbox";
+      };
+
       home.shellAliases = {
         rebuild = "sudo nixos-rebuild switch --flake github:deephack1982/nixos-config#frame1 --impure";
       };
