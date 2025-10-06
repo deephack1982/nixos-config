@@ -151,6 +151,11 @@
             identityFile = "/home/markd/.ssh/google_compute_engine";
             host = "*.ittybit-robots.com";
           };
+          "vs-ssh.visualstudio.com" = {
+            user = "markd";
+            identityFile = "/home/markd/.ssh/google_compute_engine";
+            host = "vs-ssh.visualstudio.com";
+          };
           "*" = { setEnv.TERM = "xterm-256color"; };
         };
       };
