@@ -15,6 +15,10 @@
           git config user.signkey "9B801503C0FCA9FB"
           git config commit.gpgsign true
         '')
+        (pkgs.writeShellScriptBin "ericsson-git" ''
+          git config user.name "Mark Dickie"
+          git config user.email "mark.dickie@ericsson.com"
+        '')
         pkgs.podman-compose
         pkgs.qemu
         pkgs.powerline-fonts
@@ -67,7 +71,7 @@
       };
 
       home.shellAliases = {
-        rebuild = "sudo nixos-rebuild switch --flake github:deephack1982/nixos-config#frame1 --impure";
+        rebuild = "sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --flake github:deephack1982/nixos-config#frame1 --impure";
       };
 
       xdg.desktopEntries  = {
