@@ -53,6 +53,7 @@
         master-pkgs.intune-portal
         pkgs.nemu
         pkgs.virt-viewer
+        pkgs.mpv
       ];
 
       programs.bash.enable = true;
