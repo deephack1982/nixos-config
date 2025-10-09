@@ -58,6 +58,7 @@
         pkgs.nemu
         pkgs.virt-viewer
         pkgs.mpv
+        pkgs.smassh
       ];
 
       programs.bash.enable = true;
@@ -91,6 +92,12 @@
 
       programs.distrobox = {
         enable = true;
+      };
+
+      programs.zellij = {
+        enable = true;
+        enableBashIntegration = true;
+        settings = { theme = "gruvbox-dark"; };
       };
 
       programs.firefox = {
