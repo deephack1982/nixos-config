@@ -97,6 +97,8 @@
       programs.zellij = {
         enable = true;
         enableBashIntegration = true;
+        attachExistingSession = true;
+        exitShellOnExit = true;
         settings = { theme = "gruvbox-dark"; };
       };
 
