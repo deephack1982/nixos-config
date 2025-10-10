@@ -99,7 +99,10 @@
         enableBashIntegration = true;
         attachExistingSession = true;
         exitShellOnExit = true;
-        settings = { theme = "gruvbox-dark"; };
+        settings = {
+          theme = "gruvbox-dark";
+          default_layout = "welcome";
+        };
       };
 
       programs.firefox = {
