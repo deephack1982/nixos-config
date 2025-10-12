@@ -59,7 +59,7 @@
         pkgs.virt-viewer
         pkgs.mpv
         pkgs.smassh
-        pkgs.jokalsend
+        pkgs.jocalsend
       ];
 
       programs.bash.enable = true;
