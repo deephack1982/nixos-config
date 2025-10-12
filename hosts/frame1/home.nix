@@ -59,6 +59,7 @@
         pkgs.virt-viewer
         pkgs.mpv
         pkgs.smassh
+        pkgs.jokalsend
       ];
 
       programs.bash.enable = true;
@@ -96,9 +97,6 @@
 
       programs.zellij = {
         enable = true;
-        enableBashIntegration = true;
-        attachExistingSession = true;
-        exitShellOnExit = true;
         settings = {
           theme = "gruvbox-dark";
           default_layout = "welcome";

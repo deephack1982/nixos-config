@@ -188,11 +188,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1760239230,
-        "narHash": "sha256-eqSP/BAbQwNTlQ/6yuK0yILzZAPNNj91gp6oIfVtu/E=",
+        "lastModified": 1760295538,
+        "narHash": "sha256-SgnrSgyWj2ezIftKRpf+C6AdYqTkXN4iJA+JRQtdjrk=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "c4aaddeaecc09554c92518fd904e3e84b497ed09",
+        "rev": "904fa32d77609f281ef32d5209926d81848b687a",
         "type": "github"
       },
       "original": {
@@ -616,11 +616,11 @@
         "pyprland": "pyprland"
       },
       "locked": {
-        "lastModified": 1760287715,
-        "narHash": "sha256-XBBt8pK6maGOFH1z6J9N90A82Z8al9q3eUP1obJsg3s=",
+        "lastModified": 1760301743,
+        "narHash": "sha256-kcGZMURRbAh2kwX4zTzJNfVxPq0uvRHQaqjmfg/M4Hk=",
         "owner": "deephack1982",
         "repo": "omarchy-nix-deephack",
-        "rev": "5caa0e236e38c0162b4b66c53efe5898a0204cef",
+        "rev": "18455e39e759848b2b2bb328cdbe9aaeda4ded92",
         "type": "github"
       },
       "original": {
