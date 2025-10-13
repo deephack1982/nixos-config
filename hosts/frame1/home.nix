@@ -97,7 +97,7 @@
       programs.zellij = {
         enable = true;
         settings = {
-          theme = "gruvbox-dark";
+          theme = "tokyo-night-dark";
           default_layout = "welcome";
         };
       };
