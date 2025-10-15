@@ -59,6 +59,7 @@
         pkgs.virt-viewer
         pkgs.mpv
         pkgs.smassh
+        pkgs.kitty
       ];
 
       programs.bash.enable = true;
@@ -113,7 +114,7 @@
           init.defaultBranch = "main";
           url."ssh://git@github.com/" = { insteadOf = "gh:"; };
           url."ssh://git@github.com/ittybit/" = { insteadOf = "ib:"; };
-          url."ssh://git@vs-ssh.visual-studio.com:v3/ericsson/" = { insteadOf = "es:"; };
+          url."ssh://git@vs-ssh.visualstudio.com:v3/ericsson/" = { insteadOf = "es:"; };
         };
       };
 
