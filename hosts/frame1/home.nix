@@ -59,7 +59,6 @@
         pkgs.virt-viewer
         pkgs.mpv
         pkgs.smassh
-        pkgs.kitty
       ];
 
       programs.bash.enable = true;
