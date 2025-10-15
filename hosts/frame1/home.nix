@@ -51,7 +51,7 @@
         pkgs.taskwarrior3
         pkgs.taskwarrior-tui
         timr-tui.packages.x86_64-linux.default
-        pkgs.slides
+        pkgs.presenterm
         pkgs.teams-for-linux
         pkgs.satty
         master-pkgs.intune-portal
@@ -113,6 +113,7 @@
           init.defaultBranch = "main";
           url."ssh://git@github.com/" = { insteadOf = "gh:"; };
           url."ssh://git@github.com/ittybit/" = { insteadOf = "ib:"; };
+          url."ssh://git@vs-ssh.visual-studio.com:v3/ericsson/" = { insteadOf = "es:"; };
         };
       };
 
