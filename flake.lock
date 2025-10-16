@@ -188,11 +188,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1760500983,
-        "narHash": "sha256-zfY4F4CpeUjTGgecIJZ+M7vFpwLc0Gm9epM/iMQd4w8=",
+        "lastModified": 1760641408,
+        "narHash": "sha256-Y086n2U0kN9HjOo+UScwQDS27gKMiIlT6vDehvlmdAg=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "c53e65ec92f38d30e3c14f8d628ab55d462947aa",
+        "rev": "847669dabf374d32a072bdab3f08cae7296ac011",
         "type": "github"
       },
       "original": {
@@ -616,11 +616,11 @@
         "pyprland": "pyprland"
       },
       "locked": {
-        "lastModified": 1760600001,
-        "narHash": "sha256-0dkfKZGxC+eYN3ds0DiCRFhXXcJGPUZ0Ix1hwBzoLIU=",
+        "lastModified": 1760654036,
+        "narHash": "sha256-BFYkHjumQ8SRoAP/a1+hXFd83A6mSXvh71mn7Mu6JLo=",
         "owner": "deephack1982",
         "repo": "omarchy-nix-deephack",
-        "rev": "fd4949af0aab803ce5adb5c524819e37bce1b9bd",
+        "rev": "7b901fa0f08295e11ebdecc11e629cbbc4e6609e",
         "type": "github"
       },
       "original": {
@@ -807,11 +807,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1760540457,
-        "narHash": "sha256-WxO5BzV7sUizB8TFxH2KJVKrRvuKRHJmK2v2FtSlvuw=",
+        "lastModified": 1760618659,
+        "narHash": "sha256-PIEaIaz+mlVbjXLD622zHRizebzUFLGNAH7ZxiCKnX4=",
         "owner": "sectore",
         "repo": "timr-tui",
-        "rev": "361a82ee081aa82cc5addfacab45026058865c3f",
+        "rev": "4ec52545e5d880a2ab1da5f2a82f1a4f1da38228",
         "type": "github"
       },
       "original": {
