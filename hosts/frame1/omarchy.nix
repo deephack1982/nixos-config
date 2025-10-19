@@ -20,7 +20,7 @@
       "SUPER, B, exec, $browser"
       "SUPER, M, exec, $webapp=https://music.youtube.com"
       "SUPER, N, exec, $editor"
-      "SUPER SHIFT, N, exec, ~/.local/share/omarchy/bin/window-group.sh -c dev.zed.Zed -m class"
+      "SUPER SHIFT, N, exec, ~/.local/share/omarchy/bin/window-group.sh -g dev.zed.Zed"
       "SUPER, G, exec, $messenger"
       "SUPER, slash, exec, $passwordManager"
     ];

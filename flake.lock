@@ -616,11 +616,11 @@
         "pyprland": "pyprland"
       },
       "locked": {
-        "lastModified": 1760869844,
-        "narHash": "sha256-g2gkkKj3UE6YWXf2wXN4ax2XU0yAl2YV3uwk++DzMbA=",
+        "lastModified": 1760882124,
+        "narHash": "sha256-go9IrBN8zS2TnnoMODc1c1Za5MN1Wp3wRzz7RnN5YAE=",
         "owner": "deephack1982",
         "repo": "omarchy-nix-deephack",
-        "rev": "3bf44f8c51f804eec183e321ea198d8e69e05db6",
+        "rev": "81eaa067e05d8b9bb680aeb228ba682ab5096535",
         "type": "github"
       },
       "original": {
