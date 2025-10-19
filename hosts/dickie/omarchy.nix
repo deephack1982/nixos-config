@@ -20,6 +20,6 @@
       "SUPER, G, exec, $messenger"
       "SUPER, slash, exec, $passwordManager"
     ];
-    kb_layout = "sv";
+    kb_layout = "se";
   };
 }
