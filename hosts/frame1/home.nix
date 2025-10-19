@@ -117,6 +117,19 @@
         };
       };
 
+      programs.helix = {
+        enable = true;
+        settings = {
+          theme = "tokyonight";
+          editor.lsp.display-messages = true;
+        };
+        extraPackages = [
+          pkgs.nil
+          pkgs.terraform-ls
+          pkgs.ruby-lsp
+        ];
+      };
+
       programs.zed-editor = {
         enable = true;
         extensions = [ "nix" "ruby" "terraform" "ansible" ];
