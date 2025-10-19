@@ -45,11 +45,34 @@
       pkgs.superfile
       pkgs.taskwarrior3
       pkgs.taskwarrior-tui
+      pkgs.satty
+      pkgs.nemu
+      pkgs.virt-viewer
+      pkgs.mpv
+      pkgs.smassh
     ];
 
     programs.bash.enable = true;
     programs.gpg.enable = true;
     services.gpg-agent.enable = true;
+
+    programs.oh-my-posh = {
+      enable = true;
+      enableBashIntegration = true;
+      useTheme = "gruvbox";
+    };
+
+    programs.distrobox = {
+      enable = true;
+    };
+
+    programs.zellij = {
+      enable = true;
+      settings = {
+        theme = "tokyo-night-dark";
+        default_layout = "welcome";
+      };
+    };
 
     home.shellAliases = {
       rebuild = "sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --flake github:deephack1982/nixos-config#dickie --impure";
@@ -73,44 +96,17 @@
       };
     };
 
-    programs.zed-editor = {
+    programs.helix = {
       enable = true;
-      extensions = [ "nix" "ruby" "terraform" "ansible" ];
-      package = master-pkgs.zed-editor;
-      extraPackages = [
-        pkgs.ruby.gems.rubocop
-        pkgs.ruby.gems.ruby-lsp
-        pkgs.ruby.gems.rbs
-        pkgs.nixd
-        pkgs.terraform-ls
-        pkgs.nil
-      ];
-      userSettings = {
-        "lsp" = {
-          "terraform-ls".initialization_options.experimentalFeatures.prefillRequiredFields = true;
-          "ruby-lsp" = {
-            "initialization_options" = {
-              "enabledFeatures" = {
-                "diagnostics" = false;
-                "onTypeFormatting" = false;
-              };
-              "formatter" = "standard";
-            };
-            "settings".use_bundler = true;
-          };
-        };
-        "nix" = {
-          "language_servers" = [ "nil" "!nixd" ];
-          "binary".path_lookup = true;
-        };
-        "languages"."Ruby"."language_servers" = [ "ruby-lsp" "!solargraph" "..." ];
-        "load_direnv" = "shell_hook";
-        "theme" = {
-          "mode" = "dark";
-          "light" = "One Light";
-          "dark" = "Ayu Dark";
-        };
+      settings = {
+        theme = "tokyonight";
+        editor.lsp.display-messages = true;
       };
+      extraPackages = [
+        pkgs.nil
+        pkgs.terraform-ls
+        pkgs.ruby-lsp
+      ];
     };
 
     programs.home-manager.enable = true;
