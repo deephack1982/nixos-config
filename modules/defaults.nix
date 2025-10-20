@@ -43,6 +43,7 @@
     wshowkeys.enable = true;
   };
 
+  services.devmon.enable = true;
   services.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
