@@ -59,6 +59,7 @@
         pkgs.virt-viewer
         pkgs.mpv
         pkgs.smassh
+        pkgs,glow
       ];
 
       programs.bash.enable = true;
