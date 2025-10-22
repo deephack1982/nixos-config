@@ -38,8 +38,6 @@
       pkgs.bottom
       pkgs.devenv
       pkgs.keepassxc
-      pkgs.wob
-      pkgs.swayimg
       pkgs.zathura
       pkgs.satty
       pkgs.superfile

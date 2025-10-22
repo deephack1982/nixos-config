@@ -6,6 +6,7 @@
     monitors = [ ",preferred,auto,1" ];
     terminal = "kitty";
     editor = "kitty hx";
+    browser = "zen";
     quick_app_bindings = [
       "SUPER, C, exec, $webapp https://app.hey.com/calendar/weeks/"
       "SUPER, E, exec, $webapp https://app.hey.com"
