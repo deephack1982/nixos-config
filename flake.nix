@@ -15,10 +15,17 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     timr-tui.url = "github:sectore/timr-tui";
+
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
-  outputs = { self, nixpkgs, omarchy-nix, home-manager, timr-tui, ... }@inputs: let
+  outputs = { self, nixpkgs, omarchy-nix, home-manager, timr-tui, zen-browser, ... }@inputs: let
     master-pkgs = import (builtins.fetchTarball {
       url = "https://github.com/NixOS/nixpkgs/archive/master.tar.gz";
     }) {};
@@ -36,7 +43,7 @@
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
       frame1 = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs master-pkgs timr-tui;};
+        specialArgs = {inherit inputs outputs master-pkgs timr-tui zen-browser;};
         system = "x86_64-linux";
         modules = [
           ./hosts/frame1/default.nix

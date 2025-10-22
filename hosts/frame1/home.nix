@@ -4,7 +4,7 @@
   home-manager.users.markd = { ... }: {
     nixpkgs.config.allowUnfree = true;
 
-    imports = [ inputs.omarchy-nix.homeManagerModules.default ];
+    imports = [ inputs.omarchy-nix.homeManagerModules.default inputs.zen-browser.homeModules.beta ];
 
       home.stateVersion = "25.05";
 
@@ -19,6 +19,10 @@
           git config user.name "Mark Dickie"
           git config user.email "mark.dickie@ericsson.com"
         '')
+        (inputs.zen-browser.packages.x86_64-linux.default.override {
+            nativeMessagingHosts = [pkgs.firefoxpwa];
+          }
+        )
         pkgs.podman-compose
         pkgs.qemu
         pkgs.powerline-fonts
@@ -101,6 +105,11 @@
           theme = "tokyo-night-dark";
           default_layout = "welcome";
         };
+      };
+
+      programs.zen-browser = {
+        enable = true;
+        languagePacks = [ "en-GB" ];
       };
 
       programs.firefox = {
