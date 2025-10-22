@@ -19,10 +19,6 @@
           git config user.name "Mark Dickie"
           git config user.email "mark.dickie@ericsson.com"
         '')
-        (inputs.zen-browser.packages.x86_64-linux.default.override {
-            nativeMessagingHosts = [pkgs.firefoxpwa];
-          }
-        )
         pkgs.podman-compose
         pkgs.qemu
         pkgs.powerline-fonts
@@ -109,6 +105,7 @@
 
       programs.zen-browser = {
         enable = true;
+        nativeMessagingHosts = [pkgs.firefoxpwa];
         languagePacks = [ "en-GB" ];
       };
 
