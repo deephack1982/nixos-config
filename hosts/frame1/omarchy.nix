@@ -6,7 +6,7 @@
     theme_overrides = {
       wallpaper_path = /home/markd/Pictures/Wallpapers/Internals13.jpeg;
     };
-    monitors = [ "eDP-1,preferred,auto,1,vrr,1" "DP-4,preferred,up,1,vrr,1" ];
+    monitors = [ "eDP-1,preferred,auto,1,vrr,1" "DP-4,preferred,auto-up,1,vrr,1" ];
     terminal = "kitty";
     editor = "zeditor";
     browser = "zen";
