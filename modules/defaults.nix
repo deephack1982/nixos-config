@@ -15,7 +15,7 @@
   users.users.markd = {
     isNormalUser = true;
     description = "Mark Dickie";
-    extraGroups = [ "networkmanager" "wheel" "podman" "adbusers" "video" "render" ];
+    extraGroups = [ "networkmanager" "wheel" "podman" "adbusers" "video" "render" "plugdev" ];
     packages = with pkgs; [
     ];
   };

@@ -90,5 +90,9 @@
      }];
    };
 
+   services.udev.extraRules = ''
+       SUBSYSTEMS=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="35ca", ATTRS{idProduct}=="101d", MODE="0666", GROUP="plugdev"
+     '';
+
    system.stateVersion = "25.05";
 }
