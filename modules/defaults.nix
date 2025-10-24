@@ -12,6 +12,10 @@
 
   services.xserver.enable = true;
 
+  users.groups.plugdev = {
+        members = [ "markd" ];
+  };
+
   users.users.markd = {
     isNormalUser = true;
     description = "Mark Dickie";
