@@ -23,18 +23,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+
+    tokyo-night-sddm.url = "github:deephack1982/tokyo-night-sddm";
   };
 
-  outputs = { self, nixpkgs, omarchy-nix, home-manager, timr-tui, zen-browser, ... }@inputs: let
-    master-pkgs = import (builtins.fetchTarball {
+  outputs = { self, nixpkgs, omarchy-nix, home-manager, timr-tui, zen-browser, tokyo-night-sddm,... }@inputs:
+  let
+    systems = [ "aarch64-linux" "x86_64-linux" ];
+    master-pkgs = system: import (builtins.fetchTarball {
       url = "https://github.com/NixOS/nixpkgs/archive/master.tar.gz";
-    }) {};
-    inherit (self) outputs;
-    # # Supported systems for your flake packages, shell, etc.
-    systems = [
-      "aarch64-linux"
-      "x86_64-linux"
-    ];
+    }){ inherit system; };
   in {
     # Your custom packages and modifications, exported as overlays
     # overlays = import ./overlays {inherit inputs;};
@@ -43,9 +41,14 @@
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
       frame1 = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs master-pkgs timr-tui zen-browser;};
+        specialArgs = {inherit inputs timr-tui zen-browser;
+          master-pkgs = master-pkgs "x86_64-linux";
+        };
         system = "x86_64-linux";
         modules = [
+          {
+            nixpkgs.overlays = [ tokyo-night-sddm.overlays.default ];
+          }
           ./hosts/frame1/default.nix
           ./hosts/frame1/omarchy.nix
           ./hosts/frame1/home.nix
@@ -53,13 +56,14 @@
           omarchy-nix.nixosModules.default
           home-manager.nixosModules.home-manager
 
+
           {
             nixpkgs.config.allowUnfree = true;
           }
         ];
       };
       dickie = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs master-pkgs timr-tui;};
+        specialArgs = {inherit inputs timr-tui; };
         system = "aarch64-linux";
         modules = [
           ./hosts/dickie/default.nix

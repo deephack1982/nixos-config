@@ -29,8 +29,12 @@
   };
   hardware.enableRedistributableFirmware = true;
 
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.displayManager.sddm.wayland.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+    theme = "tokyo-night";
+  };
+
 
   programs.uwsm = {
     enable = true;

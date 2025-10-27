@@ -603,6 +603,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_5": {
+      "locked": {
+        "lastModified": 1761468971,
+        "narHash": "sha256-vY2OLVg5ZTobdroQKQQSipSIkHlxOTrIF1fsMzPh8w8=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "78e34d1667d32d8a0ffc3eba4591ff256e80576e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-25.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "omarchy-nix": {
       "inputs": {
         "home-manager": [
@@ -706,6 +722,7 @@
         "nixpkgs": "nixpkgs",
         "omarchy-nix": "omarchy-nix",
         "timr-tui": "timr-tui",
+        "tokyo-night-sddm": "tokyo-night-sddm",
         "zen-browser": "zen-browser"
       }
     },
@@ -818,6 +835,24 @@
       "original": {
         "owner": "sectore",
         "repo": "timr-tui",
+        "type": "github"
+      }
+    },
+    "tokyo-night-sddm": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_5"
+      },
+      "locked": {
+        "lastModified": 1761571008,
+        "narHash": "sha256-aoW4Wgs5Hj/xXdT7anM7W+ODdOQPmiMfS7TQofHPIWA=",
+        "owner": "deephack1982",
+        "repo": "tokyo-night-sddm",
+        "rev": "5d893c94a3fdc047237c41d4cc4dfbbe12ff5e17",
+        "type": "github"
+      },
+      "original": {
+        "owner": "deephack1982",
+        "repo": "tokyo-night-sddm",
         "type": "github"
       }
     },
