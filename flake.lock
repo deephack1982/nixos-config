@@ -843,11 +843,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1761571008,
-        "narHash": "sha256-aoW4Wgs5Hj/xXdT7anM7W+ODdOQPmiMfS7TQofHPIWA=",
+        "lastModified": 1761574298,
+        "narHash": "sha256-NDZVkEhtw+crds0sHGjsH2Q3nWotwOzOCM7ePdTS3/s=",
         "owner": "deephack1982",
         "repo": "tokyo-night-sddm",
-        "rev": "5d893c94a3fdc047237c41d4cc4dfbbe12ff5e17",
+        "rev": "c6201911a65485db0fd828997b6c6ce73e624ead",
         "type": "github"
       },
       "original": {
