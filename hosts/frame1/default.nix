@@ -29,18 +29,11 @@
   };
   hardware.enableRedistributableFirmware = true;
 
-  services.greetd = {
-    enable = true;
-    settings.default_session.command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-  };
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.displayManager.sddm.wayland.enable = true;
 
-  programs.regreet = {
+  programs.uwsm = {
     enable = true;
-    settings = {
-      GTK = {
-        application_prefer_dark_theme = true;
-      };
-    };
   };
 
   services.fwupd = {
