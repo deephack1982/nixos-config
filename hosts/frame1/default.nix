@@ -32,7 +32,7 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    theme = "tokyo-night";
+    theme = "tokyo-night-sddm";
     extraPackages = [ pkgs.tokyo-night-sddm ];
   };
 
