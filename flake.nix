@@ -24,7 +24,10 @@
       inputs.home-manager.follows = "home-manager";
     };
 
-    tokyo-night-sddm.url = "github:deephack1982/tokyo-night-sddm";
+    tokyo-night-sddm = {
+      url = "github:deephack1982/tokyo-night-sddm";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, omarchy-nix, home-manager, timr-tui, zen-browser, tokyo-night-sddm,... }@inputs:
