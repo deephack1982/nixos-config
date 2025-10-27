@@ -25,7 +25,7 @@
     };
 
     tokyo-night-sddm = {
-      url = "github:deephack1982/tokyo-night-sddm/c6201911a65485db0fd828997b6c6ce73e624ead";
+      url = "github:deephack1982/tokyo-night-sddm/cdb0e515c1d5ba31446329b9e593b84c8c755cad";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

@@ -829,17 +829,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1761574298,
-        "narHash": "sha256-NDZVkEhtw+crds0sHGjsH2Q3nWotwOzOCM7ePdTS3/s=",
+        "lastModified": 1761575731,
+        "narHash": "sha256-KXGitm2QJZUwWCVqP3E2ofrp2ydSA7hZvfdch3oqsOY=",
         "owner": "deephack1982",
         "repo": "tokyo-night-sddm",
-        "rev": "c6201911a65485db0fd828997b6c6ce73e624ead",
+        "rev": "cdb0e515c1d5ba31446329b9e593b84c8c755cad",
         "type": "github"
       },
       "original": {
         "owner": "deephack1982",
         "repo": "tokyo-night-sddm",
-        "rev": "c6201911a65485db0fd828997b6c6ce73e624ead",
+        "rev": "cdb0e515c1d5ba31446329b9e593b84c8c755cad",
         "type": "github"
       }
     },
