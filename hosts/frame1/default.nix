@@ -33,7 +33,6 @@
     enable = true;
     wayland.enable = true;
     theme = "tokyo-night-sddm";
-    extraPackages = [ pkgs.tokyo-night-sddm ];
   };
 
 
@@ -91,6 +90,10 @@
    services.udev.extraRules = ''
        SUBSYSTEMS=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="35ca", ATTRS{idProduct}=="101d", MODE="0666", GROUP="plugdev"
      '';
+
+  environment.systemPackages = with pkgs; [
+      tokyo-night-sddm
+  ];
 
    system.stateVersion = "25.05";
 }
