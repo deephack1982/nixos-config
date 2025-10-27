@@ -93,6 +93,7 @@
 
   environment.systemPackages = with pkgs; [
       tokyo-night-sddm
+      libsForQt5.qtgraphicaleffects
   ];
 
    system.stateVersion = "25.05";
