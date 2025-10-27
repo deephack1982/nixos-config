@@ -33,6 +33,7 @@
     enable = true;
     wayland.enable = true;
     theme = "tokyo-night";
+    extraPackages = [ tokyo-night-sddm ];
   };
 
 
