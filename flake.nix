@@ -66,9 +66,12 @@
         ];
       };
       dickie = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs timr-tui; };
+        specialArgs = {inherit inputs timr-tui zen-browser; };
         system = "aarch64-linux";
         modules = [
+          {
+            nixpkgs.overlays = [ tokyo-night-sddm.overlays.default ];
+          }
           ./hosts/dickie/default.nix
           ./hosts/dickie/omarchy.nix
           ./hosts/dickie/home.nix
