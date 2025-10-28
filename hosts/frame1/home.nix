@@ -199,7 +199,7 @@
             user = "markd";
             identityFile = "/home/markd/.ssh/google_compute_engine";
             host = "ssh.dev.azure.com";
-          }
+          };
           "*" = { setEnv.TERM = "xterm-256color"; };
         };
       };
