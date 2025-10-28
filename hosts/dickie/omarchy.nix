@@ -3,7 +3,7 @@
     full_name = "Mark Dickie";
     email_address = "mark.dickie@gmail.com";
     theme = "tokyo-night";
-    monitors = [ ",preferred,auto,1" ];
+    monitors = [ ",preferred,auto,1,vrr,1" ];
     terminal = "kitty";
     editor = "kitty hx";
     browser = "zen";
@@ -21,6 +21,6 @@
       "SUPER, G, exec, $messenger"
       "SUPER, slash, exec, $passwordManager"
     ];
-    kb_layout = "se";
+    kb_layout = "us";
   };
 }

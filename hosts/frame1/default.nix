@@ -67,7 +67,7 @@
    };
 
    # Configure console keymap
-   console.keyMap = "uk";
+   console.keyMap = "us";
    console.font = "Lat2-Terminus16";
 
    programs.gnupg.agent.enable = true;

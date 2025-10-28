@@ -18,6 +18,16 @@
 
   hardware.deviceTree.enable = true;
 
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+    theme = "tokyo-night";
+  };
+
+  programs.uwsm = {
+    enable = true;
+  };
+
   i18n.defaultLocale = "en_GB.UTF-8";
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "sv_SE.UTF-8";
@@ -31,7 +41,7 @@
     LC_TIME = "sv_SE.UTF-8";
   };
  console = {
-      keyMap = "sv-latin1";
+      keyMap = "us";
       font = "${pkgs.powerline-fonts}/share/consolefonts/ter-powerline/v20n.psf.gz";
  };
 
@@ -45,7 +55,12 @@
   };
   security.rtkit.enable = true;
 
-  services.xserver.xkb.layout = "se";
+  services.xserver.xkb.layout = "us";
+
+  environment.systemPackages = with pkgs; [
+    tokyo-night-sddm
+    libsForQt5.qtgraphicaleffects
+  ];
 
   system.stateVersion = "25.05";
 }

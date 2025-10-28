@@ -85,6 +85,12 @@
       languagePacks = [ "en-GB" ];
     };
 
+    programs.zen-browser = {
+      enable = true;
+      nativeMessagingHosts = [pkgs.firefoxpwa];
+      languagePacks = [ "en-GB" ];
+    };
+
     programs.git = {
       enable = true;
       extraConfig = {
