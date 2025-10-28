@@ -4,7 +4,7 @@
   home-manager.users.markd = { ... }: {
   nixpkgs.config.allowUnfree = true;
 
-  imports = [ inputs.omarchy-nix.homeManagerModules.default ];
+  imports = [ inputs.omarchy-nix.homeManagerModules.default inputs.zen-browser.homeModules.twilight ];
 
     home.stateVersion = "25.05";
 
