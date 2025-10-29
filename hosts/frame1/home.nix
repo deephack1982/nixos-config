@@ -58,6 +58,7 @@
         pkgs.mpv
         pkgs.smassh
         pkgs.glow
+        pkgs.codex
       ];
 
       programs.bash.enable = true;
