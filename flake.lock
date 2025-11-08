@@ -732,11 +732,11 @@
         "pyprland": "pyprland"
       },
       "locked": {
-        "lastModified": 1762621005,
-        "narHash": "sha256-oEzuNxVW8oMPaZ02ho03qtwDZBXuYqwJbMqrtGzGFf8=",
+        "lastModified": 1762641745,
+        "narHash": "sha256-oYJhPqMBqbdQkcW3IzOnhD/P4QzahUu+rYYI/8pUh5Y=",
         "owner": "deephack1982",
         "repo": "omarchy-nix-deephack",
-        "rev": "516fd9d0d13cb7c14614a6f788c80b174e486b07",
+        "rev": "cd5f70fa52a51f9ab20cf10c1af6898e9756992e",
         "type": "github"
       },
       "original": {
@@ -1076,11 +1076,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762575755,
-        "narHash": "sha256-XOeYONAhmYfqGR6W0UapzbIfmnh/WEdpdECIvSVHyww=",
+        "lastModified": 1762635274,
+        "narHash": "sha256-7jxraP+wfUA6Afpf5YC6WmLH+x7cCAgGDN4o9UVGl3Q=",
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "5ba60c02a601fafb9661200e390c6995a6b596e3",
+        "rev": "e01a55085d0842a33e17263ef2380d746ff91107",
         "type": "github"
       },
       "original": {
