@@ -62,7 +62,7 @@ in
         pkgs.smassh
         pkgs.glow
         codexTools.codex
-        codexTools.codex-acp
+        #codexTools.codex-acp
       ];
 
       programs.bash.enable = true;
