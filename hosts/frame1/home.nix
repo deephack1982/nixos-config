@@ -62,7 +62,7 @@ in
         pkgs.smassh
         pkgs.glow
         codexTools.codex
-        # codexTools.codex-acp
+        codexTools.codex-acp
       ];
 
       programs.bash.enable = true;
@@ -183,17 +183,17 @@ in
         };
       };
 
-      # home.activation.codexAcpZedSymlink =
-      #   inputs.home-manager.lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      #     codexAgentRoot="$HOME/.local/share/zed/external_agents/codex"
-      #     codexBin="${codexTools.codex-acp}/bin/codex-acp"
-      #     if [ -d "$codexAgentRoot" ]; then
-      #       for versionDir in "$codexAgentRoot"/*; do
-      #         [ -d "$versionDir" ] || continue
-      #         ln -sf "$codexBin" "$versionDir/codex-acp"
-      #       done
-      #     fi
-      #   '';
+      home.activation.codexAcpZedSymlink =
+        inputs.home-manager.lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+          codexAgentRoot="$HOME/.local/share/zed/external_agents/codex"
+          codexBin="${codexTools.codex-acp}/bin/codex-acp"
+          if [ -d "$codexAgentRoot" ]; then
+            for versionDir in "$codexAgentRoot"/*; do
+              [ -d "$versionDir" ] || continue
+              ln -sf "$codexBin" "$versionDir/codex-acp"
+            done
+          fi
+        '';
 
       programs.home-manager.enable = true;
       programs.fzf.enable = true;

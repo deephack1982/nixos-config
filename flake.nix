@@ -31,7 +31,7 @@
 
     nix-ai-tools = {
       url = "github:numtide/nix-ai-tools";
-      inputs.nixpkgs.follows = "nixpkgs";
+      #inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
