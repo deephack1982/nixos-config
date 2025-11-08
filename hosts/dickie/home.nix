@@ -36,7 +36,7 @@
       pkgs.virtualgl
       pkgs.dysk
       pkgs.bottom
-      pkgs.devenv
+      # pkgs.devenv
       pkgs.keepassxc
       pkgs.zathura
       pkgs.satty
