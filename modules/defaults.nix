@@ -59,7 +59,6 @@
   # Networking
   services.resolved.enable = true;
   hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
 
   fonts.packages = with pkgs; [
     noto-fonts
