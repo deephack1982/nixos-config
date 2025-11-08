@@ -60,6 +60,15 @@
   services.resolved.enable = true;
   hardware.bluetooth.enable = true;
 
+  system.activationScripts = {
+      rfkillUnblockWlan = {
+        text = ''
+          rfkill unblock wlan
+        '';
+        deps = [];
+      };
+    };
+
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-emoji
