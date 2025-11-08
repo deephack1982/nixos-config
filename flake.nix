@@ -28,9 +28,14 @@
       url = "github:deephack1982/tokyo-night-sddm/cdb0e515c1d5ba31446329b9e593b84c8c755cad";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-ai-tools = {
+      url = "github:numtide/nix-ai-tools";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, omarchy-nix, home-manager, timr-tui, zen-browser, tokyo-night-sddm,... }@inputs:
+  outputs = { self, nixpkgs, omarchy-nix, home-manager, timr-tui, zen-browser, tokyo-night-sddm, nix-ai-tools,... }@inputs:
   let
     systems = [ "aarch64-linux" "x86_64-linux" ];
     master-pkgs = system: import (builtins.fetchTarball {
