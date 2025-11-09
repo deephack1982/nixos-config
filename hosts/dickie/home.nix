@@ -48,7 +48,7 @@
       pkgs.virt-viewer
       pkgs.mpv
       pkgs.smassh
-      pkgs.vial
+      pkgs.gum
     ];
 
     programs.bash.enable = true;

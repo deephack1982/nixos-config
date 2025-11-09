@@ -63,6 +63,7 @@ in
         pkgs.glow
         codexTools.codex
         codexTools.codex-acp
+        pkgs.gum
       ];
 
       programs.bash.enable = true;
