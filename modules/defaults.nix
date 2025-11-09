@@ -19,13 +19,16 @@
   users.users.markd = {
     isNormalUser = true;
     description = "Mark Dickie";
-    extraGroups = [ "networkmanager" "wheel" "podman" "adbusers" "video" "render" "plugdev" ];
+    extraGroups = [ "networkmanager" "wheel" "podman" "adbusers" "video" "render" "plugdev" "libvirtd"];
     packages = with pkgs; [
     ];
   };
 
   virtualisation.containers.enable = true;
     virtualisation = {
+      libvirtd = {
+        enable = true;
+      };
       podman = {
         enable = true;
 
@@ -45,6 +48,7 @@
     mtr.enable = true;
     direnv.enable = true;
     wshowkeys.enable = true;
+    virt-manager.enable = true;
   };
 
   services.devmon.enable = true;
