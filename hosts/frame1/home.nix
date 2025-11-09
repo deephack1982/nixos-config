@@ -95,7 +95,7 @@ in
       GOOGLE_APPLICATION_CREDENTIALS = "/home/markd/Documents/Safe/google.json";
     };
 
-    home.file.".config/nemu/nemu.cfg".source = "${../../confif/nemu.cfg}";
+    home.file.".config/nemu/nemu.cfg".source = "${../../config/nemu.cfg}";
 
     programs.distrobox = {
       enable = true;
