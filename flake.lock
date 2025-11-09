@@ -164,7 +164,7 @@
     },
     "flake-utils_2": {
       "inputs": {
-        "systems": "systems_6"
+        "systems": "systems_7"
       },
       "locked": {
         "lastModified": 1731533236,
@@ -705,6 +705,22 @@
     },
     "nixpkgs_5": {
       "locked": {
+        "lastModified": 1743315132,
+        "narHash": "sha256-6hl6L/tRnwubHcA4pfUUtk542wn2Om+D4UnDhlDW9BE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "52faf482a3889b7619003c0daec593a1912fddc1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_6": {
+      "locked": {
         "lastModified": 1761907660,
         "narHash": "sha256-kJ8lIZsiPOmbkJypG+B5sReDXSD1KGu2VEPNqhRa/ew=",
         "owner": "NixOS",
@@ -729,14 +745,15 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "pyprland": "pyprland"
+        "pyprland": "pyprland",
+        "wiremix": "wiremix"
       },
       "locked": {
-        "lastModified": 1762645694,
-        "narHash": "sha256-4nSNe79c+3Rx3KD4S5rFrpbnlRs7MKBZtcjf28lbEVE=",
+        "lastModified": 1762647085,
+        "narHash": "sha256-RJq9YMuTtcxo0H/hyInKWD0bYHBn0HvTI2y7QWFGy7k=",
         "owner": "deephack1982",
         "repo": "omarchy-nix-deephack",
-        "rev": "2348592dad1b695d60fea955d437bedd2d3e5f37",
+        "rev": "de9e7ce8760ce55ac0e3d5026528017ec1ff716c",
         "type": "github"
       },
       "original": {
@@ -920,6 +937,21 @@
     },
     "systems_6": {
       "locked": {
+        "lastModified": 1689347949,
+        "narHash": "sha256-12tWmuL2zgBgZkdoB6qXZsgJEH9LR3oUgpaQq2RbI80=",
+        "owner": "nix-systems",
+        "repo": "default-linux",
+        "rev": "31732fcf5e8fea42e59c2488ad31a0e651500f68",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default-linux",
+        "type": "github"
+      }
+    },
+    "systems_7": {
+      "locked": {
         "lastModified": 1681028828,
         "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
         "owner": "nix-systems",
@@ -938,7 +970,7 @@
         "crane": "crane",
         "fenix": "fenix",
         "flake-utils": "flake-utils_2",
-        "nixpkgs": "nixpkgs_5"
+        "nixpkgs": "nixpkgs_6"
       },
       "locked": {
         "lastModified": 1762186986,
@@ -1016,6 +1048,25 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "wiremix": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_5",
+        "systems": "systems_6"
+      },
+      "locked": {
+        "lastModified": 1761538858,
+        "narHash": "sha256-jgwa9ogSKYMuIDnVNC+S4VSHSVRjRAwuohvLdO8P9rw=",
+        "owner": "tsowell",
+        "repo": "wiremix",
+        "rev": "bc015f83ab345e930bfb2dbb2bf295407232a73a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tsowell",
+        "repo": "wiremix",
         "type": "github"
       }
     },
