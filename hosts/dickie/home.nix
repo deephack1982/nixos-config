@@ -2,9 +2,9 @@
 
 {
   home-manager.users.markd = { ... }: {
-  nixpkgs.config.allowUnfree = true;
+    nixpkgs.config.allowUnfree = true;
 
-  imports = [ inputs.omarchy-nix.homeManagerModules.default inputs.zen-browser.homeModules.twilight ];
+    imports = [ inputs.omarchy-nix.homeManagerModules.default inputs.zen-browser.homeModules.twilight ];
 
     home.stateVersion = "25.05";
 
@@ -88,7 +88,7 @@
 
     programs.zen-browser = {
       enable = true;
-      nativeMessagingHosts = [pkgs.firefoxpwa];
+      nativeMessagingHosts = [ pkgs.firefoxpwa ];
       languagePacks = [ "en-GB" ];
     };
 

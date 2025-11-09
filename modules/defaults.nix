@@ -48,7 +48,6 @@
     mtr.enable = true;
     direnv.enable = true;
     wshowkeys.enable = true;
-    virt-manager.enable = true;
   };
 
   services.devmon.enable = true;

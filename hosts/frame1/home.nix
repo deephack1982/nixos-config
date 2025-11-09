@@ -9,217 +9,217 @@ in
 
     imports = [ inputs.omarchy-nix.homeManagerModules.default inputs.zen-browser.homeModules.twilight ];
 
-      home.stateVersion = "25.05";
+    home.stateVersion = "25.05";
 
-      home.packages = [
-        (pkgs.writeShellScriptBin "ittybit-git" ''
-          git config user.name "Mark Dickie"
-          git config user.email "md@ittybit.com"
-          git config user.signkey "9B801503C0FCA9FB"
-          git config commit.gpgsign true
-        '')
-        (pkgs.writeShellScriptBin "ericsson-git" ''
-          git config user.name "Mark Dickie"
-          git config user.email "mark.dickie@ericsson.com"
-        '')
-        pkgs.podman-compose
-        pkgs.qemu
-        pkgs.powerline-fonts
-        pkgs.powerline-symbols
-        pkgs.asciinema
-        pkgs.asciinema-agg
-        pkgs.websocat
-        pkgs.slack
-        pkgs.pgcli
-        pkgs.refine
-        pkgs.bruno
-        pkgs.inxi
-        pkgs.libreoffice
-        pkgs.wireshark
-        pkgs.dig
-        pkgs.obs-studio
-        pkgs.macchina
-        pkgs.firmware-updater
-        pkgs.pciutils
-        pkgs.virtualgl
-        pkgs.dysk
-        pkgs.bottom
-        # pkgs.devenv
-        pkgs.keepassxc
-        pkgs.zathura
-        pkgs.satty
-        pkgs.superfile
-        pkgs.taskwarrior3
-        pkgs.taskwarrior-tui
-        timr-tui.packages.x86_64-linux.default
-        pkgs.presenterm
-        pkgs.teams-for-linux
-        pkgs.satty
-        master-pkgs.intune-portal
-        pkgs.nemu
-        pkgs.virt-viewer
-        pkgs.mpv
-        pkgs.smassh
-        pkgs.glow
-        codexTools.codex
-        codexTools.codex-acp
-        pkgs.gum
+    home.packages = [
+      (pkgs.writeShellScriptBin "ittybit-git" ''
+        git config user.name "Mark Dickie"
+        git config user.email "md@ittybit.com"
+        git config user.signkey "9B801503C0FCA9FB"
+        git config commit.gpgsign true
+      '')
+      (pkgs.writeShellScriptBin "ericsson-git" ''
+        git config user.name "Mark Dickie"
+        git config user.email "mark.dickie@ericsson.com"
+      '')
+      pkgs.podman-compose
+      pkgs.qemu
+      pkgs.powerline-fonts
+      pkgs.powerline-symbols
+      pkgs.asciinema
+      pkgs.asciinema-agg
+      pkgs.websocat
+      pkgs.slack
+      pkgs.pgcli
+      pkgs.refine
+      pkgs.bruno
+      pkgs.inxi
+      pkgs.libreoffice
+      pkgs.wireshark
+      pkgs.dig
+      pkgs.obs-studio
+      pkgs.macchina
+      pkgs.firmware-updater
+      pkgs.pciutils
+      pkgs.virtualgl
+      pkgs.dysk
+      pkgs.bottom
+      # pkgs.devenv
+      pkgs.keepassxc
+      pkgs.zathura
+      pkgs.satty
+      pkgs.superfile
+      pkgs.taskwarrior3
+      pkgs.taskwarrior-tui
+      timr-tui.packages.x86_64-linux.default
+      pkgs.presenterm
+      pkgs.teams-for-linux
+      pkgs.satty
+      master-pkgs.intune-portal
+      pkgs.nemu
+      pkgs.virt-viewer
+      pkgs.mpv
+      pkgs.smassh
+      pkgs.glow
+      codexTools.codex
+      codexTools.codex-acp
+      pkgs.gum
+    ];
+
+    programs.bash.enable = true;
+    programs.gpg.enable = true;
+    services.gpg-agent.enable = true;
+
+    programs.oh-my-posh = {
+      enable = true;
+      enableBashIntegration = true;
+      useTheme = "gruvbox";
+    };
+
+    home.shellAliases = {
+      rebuild = "sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --flake github:deephack1982/nixos-config#frame1 --impure";
+    };
+
+    xdg.desktopEntries = {
+      slack = {
+        name = "Slack";
+        comment = "Slack Desktop";
+        genericName = "Slack Client for Linux";
+        exec = "slack -s --enable-features=UseOzonePlatform --ozone-platform=wayland %U";
+        categories = [ "GNOME" "GTK" "Network" "InstantMessaging" ];
+        mimeType = [ "x-scheme-handler/slack" ];
+      };
+    };
+
+    home.sessionVariables = {
+      GOOGLE_APPLICATION_CREDENTIALS = "/home/markd/Documents/Safe/google.json";
+    };
+
+    home.file.".config/nemu/nemu.cfg".source = "../../confif/nemu.cfg";    programs.distrobox = {
+      enable = true;
+    };
+
+    programs.zellij = {
+      enable = true;
+      settings = {
+        theme = "tokyo-night-dark";
+        default_layout = "welcome";
+      };
+    };
+
+    programs.zen-browser = {
+      enable = true;
+      nativeMessagingHosts = [ pkgs.firefoxpwa ];
+      languagePacks = [ "en-GB" ];
+    };
+
+    programs.firefox = {
+      enable = true;
+      languagePacks = [ "en-GB" ];
+    };
+
+    programs.git = {
+      enable = true;
+      extraConfig = {
+        init.defaultBranch = "main";
+        url."ssh://git@github.com/" = { insteadOf = "gh:"; };
+        url."ssh://git@github.com/ittybit/" = { insteadOf = "ib:"; };
+        url."ssh://git@vs-ssh.visualstudio.com:v3/ericsson/" = { insteadOf = "es:"; };
+      };
+    };
+
+    programs.helix = {
+      enable = true;
+      settings = {
+        theme = "tokyonight";
+        editor.lsp.display-messages = true;
+      };
+      extraPackages = [
+        pkgs.nil
+        pkgs.terraform-ls
+        pkgs.ruby-lsp
       ];
+    };
 
-      programs.bash.enable = true;
-      programs.gpg.enable = true;
-      services.gpg-agent.enable = true;
-
-      programs.oh-my-posh = {
-        enable = true;
-        enableBashIntegration = true;
-        useTheme = "gruvbox";
-      };
-
-      home.shellAliases = {
-        rebuild = "sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --flake github:deephack1982/nixos-config#frame1 --impure";
-      };
-
-      xdg.desktopEntries  = {
-        slack = {
-          name="Slack";
-          comment="Slack Desktop";
-          genericName="Slack Client for Linux";
-          exec="slack -s --enable-features=UseOzonePlatform --ozone-platform=wayland %U";
-          categories= [ "GNOME" "GTK" "Network" "InstantMessaging" ];
-          mimeType=[ "x-scheme-handler/slack" ];
-        };
-      };
-
-      home.sessionVariables = {
-        GOOGLE_APPLICATION_CREDENTIALS = "/home/markd/Documents/Safe/google.json";
-      };
-
-      programs.distrobox = {
-        enable = true;
-      };
-
-      programs.zellij = {
-        enable = true;
-        settings = {
-          theme = "tokyo-night-dark";
-          default_layout = "welcome";
-        };
-      };
-
-      programs.zen-browser = {
-        enable = true;
-        nativeMessagingHosts = [pkgs.firefoxpwa];
-        languagePacks = [ "en-GB" ];
-      };
-
-      programs.firefox = {
-        enable = true;
-        languagePacks = [ "en-GB" ];
-      };
-
-      programs.git = {
-        enable = true;
-        extraConfig = {
-          init.defaultBranch = "main";
-          url."ssh://git@github.com/" = { insteadOf = "gh:"; };
-          url."ssh://git@github.com/ittybit/" = { insteadOf = "ib:"; };
-          url."ssh://git@vs-ssh.visualstudio.com:v3/ericsson/" = { insteadOf = "es:"; };
-        };
-      };
-
-      programs.helix = {
-        enable = true;
-        settings = {
-          theme = "tokyonight";
-          editor.lsp.display-messages = true;
-        };
-        extraPackages = [
-          pkgs.nil
-          pkgs.terraform-ls
-          pkgs.ruby-lsp
-        ];
-      };
-
-      programs.zed-editor = {
-        enable = true;
-        extensions = [ "nix" "ruby" "terraform" "ansible" ];
-        package = master-pkgs.zed-editor;
-        extraPackages = [
-          pkgs.ruby.gems.rubocop
-          pkgs.ruby.gems.ruby-lsp
-          pkgs.ruby.gems.rbs
-          pkgs.nixd
-          pkgs.terraform-ls
-          pkgs.nil
-        ];
-        userSettings = {
-          "lsp" = {
-            "terraform-ls".initialization_options.experimentalFeatures.prefillRequiredFields = true;
-            "ruby-lsp" = {
-              "initialization_options" = {
-                "enabledFeatures" = {
-                  "diagnostics" = false;
-                  "onTypeFormatting" = false;
-                };
-                "formatter" = "standard";
+    programs.zed-editor = {
+      enable = true;
+      extensions = [ "nix" "ruby" "terraform" "ansible" ];
+      package = master-pkgs.zed-editor;
+      extraPackages = [
+        pkgs.ruby.gems.rubocop
+        pkgs.ruby.gems.ruby-lsp
+        pkgs.ruby.gems.rbs
+        pkgs.nixd
+        pkgs.terraform-ls
+        pkgs.nil
+      ];
+      userSettings = {
+        "lsp" = {
+          "terraform-ls".initialization_options.experimentalFeatures.prefillRequiredFields = true;
+          "ruby-lsp" = {
+            "initialization_options" = {
+              "enabledFeatures" = {
+                "diagnostics" = false;
+                "onTypeFormatting" = false;
               };
-              "settings".use_bundler = true;
+              "formatter" = "standard";
             };
-          };
-          "nix" = {
-            "language_servers" = [ "nil" "!nixd" ];
-            "binary".path_lookup = true;
-            "flake" = {
-              autoArchive = true;
-            };
-          };
-          "languages"."Ruby"."language_servers" = [ "ruby-lsp" "!solargraph" "..." ];
-          "load_direnv" = "shell_hook";
-          "theme" = {
-            "mode" = "dark";
-            "light" = "One Light";
-            "dark" = "Ayu Dark";
+            "settings".use_bundler = true;
           };
         };
-      };
-
-      home.activation.codexAcpZedSymlink =
-        inputs.home-manager.lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-          codexAgentRoot="$HOME/.local/share/zed/external_agents/codex"
-          codexBin="${codexTools.codex-acp}/bin/codex-acp"
-          if [ -d "$codexAgentRoot" ]; then
-            for versionDir in "$codexAgentRoot"/*; do
-              [ -d "$versionDir" ] || continue
-              ln -sf "$codexBin" "$versionDir/codex-acp"
-            done
-          fi
-        '';
-
-      programs.home-manager.enable = true;
-      programs.fzf.enable = true;
-
-      programs.ssh = {
-        enable = true;
-        addKeysToAgent = "yes";
-        matchBlocks = {
-          "ittybit-robots.com" = {
-            user = "markd";
-            identityFile = "/home/markd/.ssh/google_compute_engine";
-            host = "*.ittybit-robots.com";
+        "nix" = {
+          "language_servers" = [ "nil" "!nixd" ];
+          "binary".path_lookup = true;
+          "flake" = {
+            autoArchive = true;
           };
-          "vs-ssh.visualstudio.com" = {
-            user = "markd";
-            identityFile = "/home/markd/.ssh/google_compute_engine";
-            host = "vs-ssh.visualstudio.com";
-          };
-          "ssh.dev.azure.com" = {
-            user = "markd";
-            identityFile = "/home/markd/.ssh/google_compute_engine";
-            host = "ssh.dev.azure.com";
-          };
-          "*" = { setEnv.TERM = "xterm-256color"; };
+        };
+        "languages"."Ruby"."language_servers" = [ "ruby-lsp" "!solargraph" "..." ];
+        "load_direnv" = "shell_hook";
+        "theme" = {
+          "mode" = "dark";
+          "light" = "One Light";
+          "dark" = "Ayu Dark";
         };
       };
     };
+
+    home.activation.codexAcpZedSymlink =
+      inputs.home-manager.lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+        codexAgentRoot="$HOME/.local/share/zed/external_agents/codex"
+        codexBin="${codexTools.codex-acp}/bin/codex-acp"
+        if [ -d "$codexAgentRoot" ]; then
+          for versionDir in "$codexAgentRoot"/*; do
+            [ -d "$versionDir" ] || continue
+            ln -sf "$codexBin" "$versionDir/codex-acp"
+          done
+        fi
+      '';
+
+    programs.home-manager.enable = true;
+    programs.fzf.enable = true;
+
+    programs.ssh = {
+      enable = true;
+      addKeysToAgent = "yes";
+      matchBlocks = {
+        "ittybit-robots.com" = {
+          user = "markd";
+          identityFile = "/home/markd/.ssh/google_compute_engine";
+          host = "*.ittybit-robots.com";
+        };
+        "vs-ssh.visualstudio.com" = {
+          user = "markd";
+          identityFile = "/home/markd/.ssh/google_compute_engine";
+          host = "vs-ssh.visualstudio.com";
+        };
+        "ssh.dev.azure.com" = {
+          user = "markd";
+          identityFile = "/home/markd/.ssh/google_compute_engine";
+          host = "ssh.dev.azure.com";
+        };
+        "*" = { setEnv.TERM = "xterm-256color"; };
+      };
+    };
+  };
 }
