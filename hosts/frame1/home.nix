@@ -64,6 +64,7 @@ in
       codexTools.codex
       codexTools.codex-acp
       pkgs.gum
+      pkgs.hatari
     ];
 
     programs.bash.enable = true;
