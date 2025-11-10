@@ -7,8 +7,6 @@
 
     omarchy-nix = {
       url = "github:deephack1982/omarchy-nix-deephack";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
     };
 
     home-manager = {
@@ -31,7 +29,6 @@
 
     nix-ai-tools = {
       url = "github:numtide/nix-ai-tools";
-      #inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
