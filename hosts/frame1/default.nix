@@ -88,8 +88,7 @@
    };
 
    services.udev.extraRules = ''
-       SUBSYSTEMS=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="35ca", ATTRS{idProduct}=="101d", MODE="0666", GROUP="plugdev"
-       KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
+       SUBSYSTEMS=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="36b0", ATTRS{idProduct}=="304e", MODE="0666", GROUP="plugdev"
      '';
 
   environment.systemPackages = with pkgs; [
