@@ -591,11 +591,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1763025944,
-        "narHash": "sha256-MpsH/GHW6gcAaKoMMV7UfCFTTW/9q/6SdRNFC0/KwME=",
+        "lastModified": 1763091096,
+        "narHash": "sha256-ThoKC3b/dQQz4K3rcKJ9MpxtjhoyArPTXxikXNuXrTw=",
         "owner": "numtide",
         "repo": "nix-ai-tools",
-        "rev": "84dc7cd104a6a71a2b1f49497cca5251bca310bb",
+        "rev": "e81cf5010ae4499ada1ea33f41ae2bb1ee1ef558",
         "type": "github"
       },
       "original": {
@@ -783,11 +783,11 @@
         "wiremix": "wiremix"
       },
       "locked": {
-        "lastModified": 1763037026,
-        "narHash": "sha256-39iQO/kWpOlow/OWOutoTDJ5eImtI6afV1w/2EAWNn0=",
+        "lastModified": 1763109365,
+        "narHash": "sha256-XcYgAoRKiIWXUeiXaSH/0tytQjPCleqObXHdHUbfCb0=",
         "owner": "deephack1982",
         "repo": "omarchy-nix-deephack",
-        "rev": "2808567cc80d4a2ef5bc65f4fc3f21d2e592d8db",
+        "rev": "d7602efbe3486d0bd2a056b51dc58b61d2edfae8",
         "type": "github"
       },
       "original": {
@@ -1161,11 +1161,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1763007974,
-        "narHash": "sha256-XMgjrDIHonLqIjc1eMQkLeemGcNqqYU0Dq+zNmeMYOI=",
+        "lastModified": 1763097615,
+        "narHash": "sha256-qxpsf2FVzXrN0WDWRgeBz7RJ5vjHNFDy8oLqbC6gU3Y=",
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "eff1c79c78950ebb4ce70c3d51513e294cf30b52",
+        "rev": "479ca480bf531285e88006aa1c70fd3bb5529f3d",
         "type": "github"
       },
       "original": {
