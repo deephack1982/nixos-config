@@ -96,5 +96,34 @@
       libsForQt5.qtgraphicaleffects
   ];
 
+  networking.wg-quick.interfaces.wg0 = {
+    autostart = false;
+
+    # IP(s) you get on the VPN
+    address = [ "10.8.0.2/32" ];
+
+    # Where you store your private key (chmod 600)
+    privateKeyFile = "/etc/wireguard/wg0.key";
+
+    # Optional preshared key
+    # presharedKeyFile = "/etc/wireguard/wg0.psk";
+
+    peers = [
+      {
+        # Public key of the *server* you’re connecting to
+        publicKey = "FqLfw7g7sMOqVj9bzj7sOuXfa7en7P7k/rfpJSdXOXU=";
+
+        # Route everything over the tunnel:
+        allowedIPs = [ "10.8.0.0/24" "10.132.0.0/24" "10.53.0.0/24" ];
+
+        # Endpoint of your WireGuard server
+        endpoint = "vpn.ittybit-robots.com:51820";
+
+        # Keep NATs happy
+        persistentKeepalive = 25;
+      }
+    ];
+  };
+
    system.stateVersion = "25.05";
 }
