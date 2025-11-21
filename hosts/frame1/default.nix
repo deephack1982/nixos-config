@@ -93,6 +93,7 @@
 
   environment.systemPackages = with pkgs; [
       tokyo-night-sddm
+      logitech-udev-rules
       libsForQt5.qtgraphicaleffects
   ];
 
