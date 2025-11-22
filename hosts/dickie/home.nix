@@ -1,5 +1,7 @@
 { pkgs, master-pkgs, timr-tui, inputs, ... }:
-
+let
+  codexTools = inputs.nix-ai-tools.packages.${pkgs.system};
+in
 {
   home-manager.users.markd = { ... }: {
     nixpkgs.config.allowUnfree = true;
@@ -49,6 +51,7 @@
       pkgs.mpv
       pkgs.smassh
       pkgs.gum
+      codexTools.codex
     ];
 
     programs.bash.enable = true;
