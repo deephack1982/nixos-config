@@ -210,11 +210,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1763992752,
-        "narHash": "sha256-iinKiBTAx7F9EkMqKFSqaWTCaay463toAPtQiA8RRyc=",
+        "lastModified": 1763997646,
+        "narHash": "sha256-hLIvcdKAtwt5eZchw+7AZFXx3NniHPbZ7puYruofsD8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "55af952c5612190c3e7862f4e2504048c50841aa",
+        "rev": "b9c0dae3e474631d4813c685187f5b4e01c34d39",
         "type": "github"
       },
       "original": {
@@ -783,11 +783,11 @@
         "wiremix": "wiremix"
       },
       "locked": {
-        "lastModified": 1763995839,
-        "narHash": "sha256-cd3f+QMLJsev5Tc+mqu8qi6nQ3NtUd7gvDwBKVkvTKM=",
+        "lastModified": 1764000250,
+        "narHash": "sha256-AvAPcrhRXxmAweIDYVh2XtONqhAKjnvVLD6v0HYVv80=",
         "owner": "deephack1982",
         "repo": "omarchy-nix-deephack",
-        "rev": "fcfac73e6507b2f03d376ab29d4f0b84d9e6d8cf",
+        "rev": "09aff7a1b17de0d09760dd9d458a48d8c8a1da44",
         "type": "github"
       },
       "original": {
