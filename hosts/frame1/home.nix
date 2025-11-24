@@ -65,7 +65,7 @@ in
       codexTools.codex-acp
       pkgs.gum
       pkgs.hatari
-      pkgs.nvtop
+      pkgs.nvtopPackages.intel
       pkgs.nputop
       pkgs.openvino
     ];
