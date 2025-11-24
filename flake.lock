@@ -783,11 +783,11 @@
         "wiremix": "wiremix"
       },
       "locked": {
-        "lastModified": 1763988241,
-        "narHash": "sha256-ZFyIXOvFW09rYJ23uZbBp9LtmCoADcPdsWT3S+IyDlw=",
+        "lastModified": 1763988614,
+        "narHash": "sha256-xBySugwbtVCx0i0JraoCG2CAYlegscnB8ZDDjinn+5E=",
         "owner": "deephack1982",
         "repo": "omarchy-nix-deephack",
-        "rev": "a78d5ae4ed7cd2e0ec00df746ab4080bb88f4681",
+        "rev": "7d49c71fef1b9b63e837d6dd4d41cb470074a37c",
         "type": "github"
       },
       "original": {
