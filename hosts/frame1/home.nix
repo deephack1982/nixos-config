@@ -66,7 +66,6 @@ in
       pkgs.gum
       pkgs.hatari
       pkgs.nvtopPackages.intel
-      pkgs.nputop
       pkgs.openvino
     ];
 
