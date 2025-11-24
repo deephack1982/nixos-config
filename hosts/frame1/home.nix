@@ -65,6 +65,9 @@ in
       codexTools.codex-acp
       pkgs.gum
       pkgs.hatari
+      pkgs.nvtop
+      pkgs.nputop
+      pkgs.openvino
     ];
 
     programs.bash.enable = true;

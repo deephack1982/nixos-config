@@ -2,5 +2,10 @@
   {
     "label": "check",
     "command": "nix flake check --impure"
+  },
+  {
+    "label": "update",
+    "command": "nix flake update",
+    "hide": "on_success"
   }
 ]
