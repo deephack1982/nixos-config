@@ -4,4 +4,4 @@ when:
 engine: "nixery"
 steps:
   - name: Check Nix Flake
-    command: "NIXPKGS_ALLOW_UNFREE=1 nix flake check --impure"
+    command: "NIXPKGS_ALLOW_UNFREE=1 nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware && nix-channel --update &&nix flake check --impure"
