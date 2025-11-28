@@ -1,0 +1,8 @@
+when:
+  - event: ["push", "pull_request", "manual"]
+    branches:
+      - main
+engine: "nixery"
+steps:
+  - name: Check Nix Flake
+    command: "NIXPKGS_ALLOW_UNFREE=1 nix flake check --impure"
