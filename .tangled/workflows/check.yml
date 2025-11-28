@@ -2,6 +2,8 @@ when:
   - event: ["push", "pull_request", "manual"]
     branch: ["main"]
 engine: "nixery"
+environment:
+  NIXPKGS_ALLOW_UNFREE: "1"
 steps:
   - name: Check Nix Flake
-    command: "NIXPKGS_ALLOW_UNFREE=1 nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware && nix-channel --update &&nix flake check --impure"
+    command: "nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware && nix-channel --update &&nix flake check --impure"
